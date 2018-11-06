@@ -1,0 +1,21 @@
+
+<div class="container">
+  <h1>SHOW DETAILS OF ONE TASK</h1>
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+</div>
+
+<div class="container">
+  <%= link_to "Back to list", tasks_path, class:"btn btn-secondary" %>
+
+  <br>
+
+  <%= link_to "Update", edit_task_path(@task), class:"btn btn-warning" %>
+
+  <br>
+
+  <%= link_to "Delete", task_path(@task),
+        method: :delete,
+        data: { confirm: "Are you sure?" }, class:"btn btn-danger"%>
+</div>
+
